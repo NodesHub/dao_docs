@@ -1,32 +1,32 @@
 # Integrations
 
-You can integrate LocalODISEO in ODISEO Station, `ODISEOd`, and JavaScript and Python SDKs.
+You can integrate LocalODISEO in ODISEO Station, `achillesd`, and JavaScript and Python SDKs.
 
 ## ODISEO Station
 
 ODISEO Station has built-in support for LocalODISEO for quick and easy interaction. [Open Station](https://station.ODISEO.money/) and switch to the `LocalODISEO` network.
 
-## ODISEOd
+## achillesd
 
-1. Ensure the same version of `ODISEOd` and LocalODISEO are installed.
+1. Ensure the same version of `achillesd` and LocalODISEO are installed.
 
-2. Use `ODISEOd` to talk to your LocalODISEO `ODISEOd` node:
+2. Use `achillesd` to talk to your LocalODISEO `achillesd` node:
 
     ```sh
-    $ ODISEOd status
+    $ achillesd status
     ```
 
-    This command automatically works because `ODISEOd` connects to `localhost:26657` by default.
+    This command automatically works because `achillesd` connects to `localhost:26657` by default.
 
     The following command is the explicit form:
     ```sh
-    $ ODISEOd status --node=tcp://localhost:26657
+    $ achillesd status --node=tcp://localhost:26657
     ```
 
-3. Run any `ODISEOd` commands against your LocalODISEO network:
+3. Run any `achillesd` commands against your LocalODISEO network:
 
    ```sh
-   $ ODISEOd query account ODISEO1dcegyrekltswvyy0xy69ydgxn9x8x32zdtapd8
+   $ achillesd query account ODISEO1dcegyrekltswvyy0xy69ydgxn9x8x32zdtapd8
    ```
 
 ## ODISEO Python SDK

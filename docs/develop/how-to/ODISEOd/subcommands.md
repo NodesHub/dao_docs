@@ -1,6 +1,6 @@
 # Subcommands
 
-This section describes the subcommands available from `ODISEOd`.
+This section describes the subcommands available from `achillesd`.
 
 ## `debug addr`
 
@@ -13,7 +13,7 @@ terrad debug addr <address>
 
 **Example**
 ```bash
-ODISEOd debug addr ODISEO14h2od5f3vahd28uywwvt8sqbi52upnzagshtrm
+achillesd debug addr ODISEO14h2od5f3vahd28uywwvt8sqbi52upnzagshtrm
 ```
 
 ## `debug pubkey`
@@ -122,7 +122,7 @@ To show a validator's address, append the `--bech=val` flag to the end of the co
 terrad keys show accountExample --bech=val
 ```
 
-To show the validator consensus address that is generated when the node is created by `ODISEOd init` and the Tendermint signing key for the node, use the `tendermint` command, as shown in the following example:
+To show the validator consensus address that is generated when the node is created by `achillesd init` and the Tendermint signing key for the node, use the `tendermint` command, as shown in the following example:
 
 ```bash
 terrad tendermint show-address
@@ -148,13 +148,13 @@ terrad query authz grants <granter-address> <grantee-address>
 
 **Example**
 ```bash
-ODISEOd query authz grants ODISEO15h6vd5f0wqps26zjlwrc6chah08ryu4hzzdwhc ODISEO14h2od5f3vahd28uywwvt8sqbi52upnzagshtrm
+achillesd query authz grants ODISEO15h6vd5f0wqps26zjlwrc6chah08ryu4hzzdwhc ODISEO14h2od5f3vahd28uywwvt8sqbi52upnzagshtrm
 ```
 
 Additionally, the `grants` command can retrieve the specific grant between a granter and a grantee for a message type by appending the message type URL to the end of the command statement, as shown in the following example:
 
 ```bash
-ODISEOd query authz grants ODISEO15h6vd5f0wqps26zjlwrc6chah08ryu4hzzdwhc ODISEO14h2od5f3vahd28uywwvt8sqbi52upnzagshtrm /cosmos.bank.v1beta1.MsgSend
+achillesd query authz grants ODISEO15h6vd5f0wqps26zjlwrc6chah08ryu4hzzdwhc ODISEO14h2od5f3vahd28uywwvt8sqbi52upnzagshtrm /cosmos.bank.v1beta1.MsgSend
 ```
 ## `query bank balances`
 
@@ -167,7 +167,7 @@ terrad query bank balances <account-address>
 
 **Example**
 ```bash
-ODISEOd query bank balances ODISEO15h6vd5f0wqps26zjlwrc6chah08ryu4hzzdwhc
+achillesd query bank balances ODISEO15h6vd5f0wqps26zjlwrc6chah08ryu4hzzdwhc
 ```
 
 ::: {note}
@@ -196,13 +196,13 @@ terrad query distribution rewards
 Check the current rewards earned by a specific delegator by appending the `<delegator-address>` at the end of the command statement, as shown in the following example:
 
 ```bash
-ODISEOd query distribution rewards ODISEO14h2od5f3vahd28uywwvt8sqbi52upnzagshtrm
+achillesd query distribution rewards ODISEO14h2od5f3vahd28uywwvt8sqbi52upnzagshtrm
 ```
 
 Check the current rewards earned by a delegator and restricted to one validator by appending the `<delegator-address>` followed by the  `<validator-address>` at the end of the command statement, as shown in the following example:
 
 ```bash
-ODISEOd query distribution rewards ODISEO14h2od5f3vahd28uywwvt8sqbi52upnzagshtrm ODISEO19t4gde4f8ndwx67qhbnur9yqdc31xznpksajbcy
+achillesd query distribution rewards ODISEO14h2od5f3vahd28uywwvt8sqbi52upnzagshtrm ODISEO19t4gde4f8ndwx67qhbnur9yqdc31xznpksajbcy
 ```
 
 ## `query distribution commission`
@@ -216,7 +216,7 @@ terrad query distribution commission <validator_address>
 
 **Example**
 ```bash
-ODISEOd query distribution commission ODISEO19t4gde4f8ndwx67qhbnur9yqdc31xznpksajbcy
+achillesd query distribution commission ODISEO19t4gde4f8ndwx67qhbnur9yqdc31xznpksajbcy
 ```
 
 ## `query distribution slashes`
@@ -230,7 +230,7 @@ terrad query distribution slashes <validator-address> <start-block-height> <end-
 
 **Example**
 ```bash
-ODISEOd query distribution slashes ODISEO19t4gde4f8ndwx67qhbnur9yqdc31xznpksajbcy 25 300
+achillesd query distribution slashes ODISEO19t4gde4f8ndwx67qhbnur9yqdc31xznpksajbcy 25 300
 ```
 
 ## `query distribution community-pool`
@@ -271,7 +271,7 @@ terrad query gov deposit <proposal-id> <depositor-address>
 
 **Example**
 ```bash
-ODISEOd query gov deposit 4 ODISEO1skjwj5whet0lpe65qaq4rpq03hjxlwd9nf39lk
+achillesd query gov deposit 4 ODISEO1skjwj5whet0lpe65qaq4rpq03hjxlwd9nf39lk
 ```
 
 ## `query gov deposits`
@@ -316,7 +316,7 @@ terrad query gov proposals
 Additionally, you can query proposals filtered by details, such as `voter` or `depositor`, by appending the corresponding flag and address at the end of the command statement, as shown in the following example:
 
 ```bash
-ODISEOd query gov proposals --voter ODISEO13a8ddv3h7kbcn73akcbpe7ueks22vaolewpaxmb
+achillesd query gov proposals --voter ODISEO13a8ddv3h7kbcn73akcbpe7ueks22vaolewpaxmb
 ```
 
 ## `query gov vote`
@@ -330,7 +330,7 @@ terrad query gov vote <proposal-id> <voter-address>
 
 **Example**
 ```bash
-ODISEOd query gov vote 7 ODISEO13a8ddv3h7kbcn73akcbpe7ueks22vaolewpaxmb
+achillesd query gov vote 7 ODISEO13a8ddv3h7kbcn73akcbpe7ueks22vaolewpaxmb
 ```
 
 ## `query gov votes`
@@ -422,7 +422,7 @@ Retrieves the current value of the ODISEO pool delta.
 
 **Syntax**
 ```sh
-ODISEOd query market ODISEO-pool-delta
+achillesd query market ODISEO-pool-delta
 ```
 
 ## `query market params`
@@ -519,7 +519,7 @@ terrad query oracle feeder <validator-address>
 
 **Example**
 ```sh
-ODISEOd query oracle feeder ODISEOvaloper15h6vd5f0wqps26zjlwrc6chah08ryu4hzzdwhc
+achillesd query oracle feeder ODISEOvaloper15h6vd5f0wqps26zjlwrc6chah08ryu4hzzdwhc
 ```
 
 ## `query oracle miss`
@@ -533,7 +533,7 @@ terrad query oracle miss <validator-address>
 
 **Example**
 ```sh
-ODISEOd query oracle miss ODISEOvaloper15h6vd5f0wqps26zjlwrc6chah08ryu4hzzdwhc
+achillesd query oracle miss ODISEOvaloper15h6vd5f0wqps26zjlwrc6chah08ryu4hzzdwhc
 ```
 
 ## `query oracle params`
@@ -595,7 +595,7 @@ terrad query slashing signing-info <validator-consensus-public-key>
 
 **Example**
 ```bash
-ODISEOd query slashing signing-info ODISEOvalconspub1atjdueldlxwft8d4729pqhdhm3nlss0u4wx7wpeqb1zhjf8yr1tn7cgw2b4q4yv9na
+achillesd query slashing signing-info ODISEOvalconspub1atjdueldlxwft8d4729pqhdhm3nlss0u4wx7wpeqb1zhjf8yr1tn7cgw2b4q4yv9na
 ```
 
 ## `query slashing signing-infos`
@@ -637,7 +637,7 @@ terrad query staking delegation <delegator-address> <validator-address>
 
 **Example**
 ```bash
-ODISEOd query staking delegation ODISEO1gghjut3ccd8ay0zduzj64hwre2fxs9ld75ru9p ODISEOvaloper15h6vd5f0wqps26zjlwrc6chah08ryu4hzzdwhc
+achillesd query staking delegation ODISEO1gghjut3ccd8ay0zduzj64hwre2fxs9ld75ru9p ODISEOvaloper15h6vd5f0wqps26zjlwrc6chah08ryu4hzzdwhc
 ```
 
 ## `query staking delegations`
@@ -651,7 +651,7 @@ terrad query staking delegations <delegator-address>
 
 **Example**
 ```bash
-ODISEOd query staking delegations ODISEO1gghjut3ccd8ay0zduzj64hwre2fxs9ld75ru9p
+achillesd query staking delegations ODISEO1gghjut3ccd8ay0zduzj64hwre2fxs9ld75ru9p
 ```
 
 ## `query staking delegations-to`
@@ -665,7 +665,7 @@ terrad query staking delegations-to <validator-address>
 
 **Example**
 ```bash
-ODISEOd query staking delegations-to ODISEOvaloper15h6vd5f0wqps26zjlwrc6chah08ryu4hzzdwhc
+achillesd query staking delegations-to ODISEOvaloper15h6vd5f0wqps26zjlwrc6chah08ryu4hzzdwhc
 ```
 
 ## `query staking historical-info`
@@ -728,7 +728,7 @@ terrad query staking redelegation <delegator-address> <src-val-addr> <dst-val-ad
 
 **Example**
 ```bash
-ODISEOd query staking redelegation ODISEO1gghjut3ccd8ay0zduzj64hwre2fxs9ld75ru9p ODISEOvaloper1l2rsakp388kuv9k8qzq6lrm9taddae7fpx59wm ODISEOvaloper1gghjut3ccd8ay0zduzj64hwre2fxs9ldmqhffj
+achillesd query staking redelegation ODISEO1gghjut3ccd8ay0zduzj64hwre2fxs9ld75ru9p ODISEOvaloper1l2rsakp388kuv9k8qzq6lrm9taddae7fpx59wm ODISEOvaloper1gghjut3ccd8ay0zduzj64hwre2fxs9ldmqhffj
 ```
 
 ## `query staking redelegations`
@@ -742,7 +742,7 @@ terrad query staking redelegations <delegator-address>
 
 **Example**
 ```bash
-ODISEOd query staking redelegations ODISEO1gghjut3ccd8ay0zduzj64hwre2fxs9ld75ru9p
+achillesd query staking redelegations ODISEO1gghjut3ccd8ay0zduzj64hwre2fxs9ld75ru9p
 ```
 
 ## `query staking redelegations-from`
@@ -756,7 +756,7 @@ terrad query staking redelegations-from <validator-address>
 
 **Example**
 ```bash
-ODISEOd query staking redelegations-from ODISEOvaloper1gghjut3ccd8ay0zduzj64hwre2fxs9ldmqhffj
+achillesd query staking redelegations-from ODISEOvaloper1gghjut3ccd8ay0zduzj64hwre2fxs9ldmqhffj
 ```
 
 ## `query staking unbonding-delegation`
@@ -770,7 +770,7 @@ terrad query staking unbonding-delegation <delegator-address> <validator-address
 
 **Example**
 ```bash
-ODISEOd query staking unbonding-delegation ODISEO1gghjut3ccd8ay0zduzj64hwre2fxs9ld75ru9p ODISEOvaloper1l2rsakp388kuv9k8qzq6lrm9taddae7fpx59wm
+achillesd query staking unbonding-delegation ODISEO1gghjut3ccd8ay0zduzj64hwre2fxs9ld75ru9p ODISEOvaloper1l2rsakp388kuv9k8qzq6lrm9taddae7fpx59wm
 ```
 
 ## `query staking unbonding-delegations`
@@ -784,7 +784,7 @@ terrad query staking unbonding-delegations <delegator-address>
 
 **Example**
 ```bash
-ODISEOd query staking unbonding-delegations ODISEO1gghjut3ccd8ay0zduzj64hwre2fxs9ld75ru9p
+achillesd query staking unbonding-delegations ODISEO1gghjut3ccd8ay0zduzj64hwre2fxs9ld75ru9p
 ```
 
 ## `query staking unbonding-delegations-from`
@@ -798,7 +798,7 @@ terrad query staking unbonding-delegations-from <validator-address>
 
 **Example**
 ```bash
-ODISEOd query staking unbonding-delegations-from ODISEOvaloper1l2rsakp388kuv9k8qzq6lrm9taddae7fpx59wm
+achillesd query staking unbonding-delegations-from ODISEOvaloper1l2rsakp388kuv9k8qzq6lrm9taddae7fpx59wm
 ```
 
 ## `query staking validators`
@@ -813,7 +813,7 @@ terrad query staking validators
 To retrieve the information of a single validator, append the validator address to the end of the command statement, as shown in the following example:
 
 ```bash
-ODISEOd query staking validator ODISEOvaloper15h6vd5f0wqps26zjlwrc6chah08ryu4hzzdwhc
+achillesd query staking validator ODISEOvaloper15h6vd5f0wqps26zjlwrc6chah08ryu4hzzdwhc
 ```
 
 ## `query treasury indicators`
@@ -1034,7 +1034,7 @@ where `<query-msg>` is a JSON string that encodes the QueryMsg.
 
 **Example**
 ```sh
-ODISEOd query wasm contract-store ODISEO1plju286nnfj3z54wgcggd4enwaa9fgf5kgrgzl '{"config":{}}'
+achillesd query wasm contract-store ODISEO1plju286nnfj3z54wgcggd4enwaa9fgf5kgrgzl '{"config":{}}'
 ```
 
 ## `query wasm params`
@@ -1076,7 +1076,7 @@ terrad tx authz exec <msg-tx-json-filename> --from=<grantee-address>
 
 **Example**
 ```bash
-ODISEOd tx authz exec tx.json --from=<ODISEO14h2od5f3vahd28uywwvt8sqbi52upnzagshtrm
+achillesd tx authz exec tx.json --from=<ODISEO14h2od5f3vahd28uywwvt8sqbi52upnzagshtrm
 ```
 
 ## `tx authz grant`
@@ -1090,13 +1090,13 @@ terrad tx authz grant <grantee-address> <authorization-type> --from=<your-addres
 
 **Example**
 ```bash
-ODISEOd tx authz grant ODISEO14h2od5f3vahd28uywwvt8sqbi52upnzagshtrm send /cosmos.bank.v1beta1.MsgSend --from=ODISEO15h6vd5f0wqps26zjlwrc6chah08ryu4hzzdwhc
+achillesd tx authz grant ODISEO14h2od5f3vahd28uywwvt8sqbi52upnzagshtrm send /cosmos.bank.v1beta1.MsgSend --from=ODISEO15h6vd5f0wqps26zjlwrc6chah08ryu4hzzdwhc
 ```
 
 Additionally, you can restrict this authorization to a specified allowance by including the `--spend-limit` flag, as shown in the following example:
 
 ```bash
-ODISEOd tx authz grant ODISEO14h2od5f3vahd28uywwvt8sqbi52upnzagshtrm send /cosmos.bank.v1beta1.MsgSend --spend-limit=15000uluna --from=ODISEO15h6vd5f0wqps26zjlwrc6chah08ryu4hzzdwhc
+achillesd tx authz grant ODISEO14h2od5f3vahd28uywwvt8sqbi52upnzagshtrm send /cosmos.bank.v1beta1.MsgSend --spend-limit=15000uluna --from=ODISEO15h6vd5f0wqps26zjlwrc6chah08ryu4hzzdwhc
 ```
 
 ## `tx authz revoke`
@@ -1109,7 +1109,7 @@ terrad tx authz revoke <grantee-address> <authorization-type> --from=<granter-ad
 ```
 
 **Example**
-ODISEOd tx authz revoke ODISEO14h2od5f3vahd28uywwvt8sqbi52upnzagshtrm /cosmos.bank.v1beta1.MsgSend --from=ODISEO15h6vd5f0wqps26zjlwrc6chah08ryu4hzzdwhc
+achillesd tx authz revoke ODISEO14h2od5f3vahd28uywwvt8sqbi52upnzagshtrm /cosmos.bank.v1beta1.MsgSend --from=ODISEO15h6vd5f0wqps26zjlwrc6chah08ryu4hzzdwhc
 
 ## `tx bank send`
 
@@ -1162,7 +1162,7 @@ terrad tx distribution set-withdraw-addr <withdrawal-address>
 
 **Example**
 ```bash
-ODISEOd tx distribution set-withdraw-addr ODISEO13a8ddv3h7kbcn73akcbpe7ueks22vaolewpaxmb
+achillesd tx distribution set-withdraw-addr ODISEO13a8ddv3h7kbcn73akcbpe7ueks22vaolewpaxmb
 ```
 
 ## `tx distribution withdraw-all-rewards`
@@ -1185,7 +1185,7 @@ terrad tx distribution withdraw-rewards <validator-address>
 
 **Example**
 ```bash
-ODISEOd tx distribution withdraw-rewards ODISEO19t4gde4f8ndwx67qhbnur9yqdc31xznpksajbcy
+achillesd tx distribution withdraw-rewards ODISEO19t4gde4f8ndwx67qhbnur9yqdc31xznpksajbcy
 ```
 
 ## `tx gov deposit`
@@ -1430,7 +1430,7 @@ terrad tx gov submit-proposal software-upgrade v0.5.0-beta3 \
     --title="Upgrade to v0.6.0-beta3" \
     --description="let's upgrade to v0.6.0-beta3" \
     --upgrade-height=20 \
-    --upgrade-info='{"binaries":{"darwin/amd64":"/Workspace/ODISEO/core/build/ODISEOd?checksum=sha256:2032356fe0899dec0cdd559f1c649bc81e53a9b4063b333059135e3a2aae8728"}}' \
+    --upgrade-info='{"binaries":{"darwin/amd64":"/Workspace/ODISEO/core/build/achillesd?checksum=sha256:2032356fe0899dec0cdd559f1c649bc81e53a9b4063b333059135e3a2aae8728"}}' \
     --type="Text" \
     --deposit="50000000uluna" \
     --from=ODISEO13a8ddv3h7kbcn73akcbpe7ueks22vaolewpaxmb \
@@ -1567,7 +1567,7 @@ where `feeder-address` is the address to which you will delegate your voting rig
 
 **Example**
 ```bash
-ODISEOd tx oracle set-feeder ODISEO14q7bu6p0aclm58dgirpo9mewh19nti5oxyamep
+achillesd tx oracle set-feeder ODISEO14q7bu6p0aclm58dgirpo9mewh19nti5oxyamep
 ```
 
 ## `tx slashing unjail`
@@ -1592,7 +1592,7 @@ Creates a new validator that is initialized with a self-delegation.
 ```bash
 terrad tx staking create-validator \
     --amount=<uluna-amount> \
-    --pubkey=$(ODISEOd tendermint show-validator) \
+    --pubkey=$(achillesd tendermint show-validator) \
     --moniker="<moniker>" \
     --website="<validator-website>" \
     --identity="<keybase-identity>" \
@@ -1616,7 +1616,7 @@ terrad tx staking delegate <validator-address> <amount>
 
 **Example**
 ```bash
-ODISEOd tx staking delegate ODISEOvaloper1l2rsakp388kuv9k8qzq6lrm9taddae7fpx59wm 2500stake
+achillesd tx staking delegate ODISEOvaloper1l2rsakp388kuv9k8qzq6lrm9taddae7fpx59wm 2500stake
 ```
 
 ## `tx staking edit-validator`
@@ -1643,7 +1643,7 @@ terrad tx staking redelegate <from-validator-address> <to-validator-address> <am
 
 **Example**
 ```bash
-ODISEOd tx staking redelegate ODISEOvaloper1gghjut3ccd8ay0zduzj64hwre2fxs9ldmqhffj ODISEOvaloper1l2rsakp388kuv9k8qzq6lrm9taddae7fpx59wm 350stake
+achillesd tx staking redelegate ODISEOvaloper1gghjut3ccd8ay0zduzj64hwre2fxs9ldmqhffj ODISEOvaloper1l2rsakp388kuv9k8qzq6lrm9taddae7fpx59wm 350stake
 ```
 
 ## `tx staking unbond`
@@ -1657,7 +1657,7 @@ terrad tx staking unbond <validator-address> <stake-amount>
 
 **Example**
 ```bash
-ODISEOd tx staking unbond ODISEOvaloper1gghjut3ccd8ay0zduzj64hwre2fxs9ldmqhffj 600stake
+achillesd tx staking unbond ODISEOvaloper1gghjut3ccd8ay0zduzj64hwre2fxs9ldmqhffj 600stake
 ```
 
 ## `tx wasm clear-admin`
@@ -1693,7 +1693,7 @@ where `<init-msg>` is a JSON string containing the `InitMsg` to initialize your 
 
 **Example**
 ```sh
-ODISEOd tx wasm instantiate 1 '{"arbiter": "ODISEO~~"}' "1000000uluna"
+achillesd tx wasm instantiate 1 '{"arbiter": "ODISEO~~"}' "1000000uluna"
 ```
 
 ## `tx wasm migrate`
@@ -1707,7 +1707,7 @@ terrad tx wasm migrate <contract-address> <new-code-id> <migrate-msg>
 
 **Example**
 ```sh
-ODISEOd tx wasm migrate ODISEO... 10 '{"verifier": "ODISEO..."}'
+achillesd tx wasm migrate ODISEO... 10 '{"verifier": "ODISEO..."}'
 ```
 
 ## `tx wasm store`

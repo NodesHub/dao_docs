@@ -1,6 +1,6 @@
 # Guides
 
-Use these guides to learn about using and installing [`ODISEOd`](ODISEOd/README.md), the command line interface and node daemon for the ODISEO network, and [LocalODISEO](localODISEO/README.md), a local testing environment.
+Use these guides to learn about using and installing [`achillesd`](achillesd/README.md), the command line interface and node daemon for the ODISEO network, and [LocalODISEO](localODISEO/README.md), a local testing environment.
 
 If this is your first time building on ODISEO and you want to set up your environment, use the [quickstart guide](../dapp/quick-start/README.md).
 
@@ -16,9 +16,9 @@ start-lcd
 :gutter: 3
 
 :::{grid-item-card}
-:link: ODISEOd/README.html
+:link: achillesd/README.html
 :class-card: sd-text-center sd-shadow-md sd-rounded-3
-```{image} /img/ODISEOd.svg
+```{image} /img/achillesd.svg
 :class: sd-width-auto sd-animate-grow50-rot20 sd-pb-2
 ```
 **`terrad`**  

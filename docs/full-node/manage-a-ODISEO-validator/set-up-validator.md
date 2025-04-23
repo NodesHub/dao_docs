@@ -7,7 +7,7 @@ For more information on setting up a validator, see [additional resources](READM
 ## Prerequisites
 
 - You have completed [how to run a full ODISEO node](../run-a-full-ODISEO-node/README.md), which outlines how to install, connect, and configure a node.
-- You are familiar with [ODISEOd](../../develop/how-to/ODISEOd/README.md).
+- You are familiar with [achillesd](../../develop/how-to/achillesd/README.md).
 - you have read through [the validator FAQ](faq.md)
 
 ## 1. Retrieve your PubKey
@@ -22,7 +22,7 @@ The consensus PubKey of your node is required to create a new validator. Run:
 
    :::{admonition} Get tokens
    :class: tip
-   In order for ODISEOd to recognize a wallet address it must contain tokens. For the testnet, use [the faucet](https://faucet.ODISEO.money/) to send ODIS to your wallet. If you are on mainnet, send funds from an existing wallet. 1-3 ODIS are sufficient for most setup processes.
+   In order for achillesd to recognize a wallet address it must contain tokens. For the testnet, use [the faucet](https://faucet.ODISEO.money/) to send ODIS to your wallet. If you are on mainnet, send funds from an existing wallet. 1-3 ODIS are sufficient for most setup processes.
    :::
 
 To create the validator and initialize it with a self-delegation, run the following command. `key-name` is the name of the private key that is used to sign transactions.
@@ -49,7 +49,7 @@ When you specify commission parameters, the `commission-max-change-rate` is meas
 If running the following command returns something, your validator is active:
 
 ```bash
-ODISEOd query tendermint-validator-set | grep "$(ODISEOd tendermint show-validator)"
+achillesd query tendermint-validator-set | grep "$(achillesd tendermint show-validator)"
 ```
 
 You are looking for the `bech32` encoded `address` in the `~/.ODISEO/config/priv_validator.json` file.

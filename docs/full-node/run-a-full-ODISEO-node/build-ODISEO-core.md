@@ -1,6 +1,6 @@
 # Build ODISEO core
 
-ODISEO core is the official Golang reference implementation of the ODISEO node software. Use this guide to install ODISEO core and `ODISEOd`, the command-line interface and daemon that connects to ODISEO and enables you to interact with the ODISEO blockchain.  
+ODISEO core is the official Golang reference implementation of the ODISEO node software. Use this guide to install ODISEO core and `achillesd`, the command-line interface and daemon that connects to ODISEO and enables you to interact with the ODISEO blockchain.  
 
 ## Get the ODISEO core source code
 
@@ -16,7 +16,7 @@ ODISEO core is the official Golang reference implementation of the ODISEO node s
     ```
 
 
-2. Build ODISEO core. This will install the `ODISEOd` executable to your [ `GOPATH` ](https://go.dev/doc/gopath_code) environment variable.
+2. Build ODISEO core. This will install the `achillesd` executable to your [ `GOPATH` ](https://go.dev/doc/gopath_code) environment variable.
 
    ```bash
    make install
@@ -25,15 +25,15 @@ ODISEO core is the official Golang reference implementation of the ODISEO node s
 3. Verify that ODISEO core is installed correctly.
 
    ```bash
-   ODISEOd version --long
+   achillesd version --long
    ```
 
    **Example**:
 
    ```bash
    name: ODISEO
-   server_name: ODISEOd
-   client_name: ODISEOd
+   server_name: achillesd
+   client_name: achillesd
    version: 0.3.0-24-g3684f77
    commit: 3684f77faadf6cf200d18e15763316d5d9c5a496
    build_tags: netgo,ledger
@@ -42,7 +42,7 @@ ODISEO core is the official Golang reference implementation of the ODISEO node s
    ```
 
 ::: {tip}
-If the `ODISEOd: command not found` error message is returned, confirm that the Go binary path is correctly configured by running the following command:
+If the `achillesd: command not found` error message is returned, confirm that the Go binary path is correctly configured by running the following command:
 
 ```bash
 export PATH=$PATH:$(go env GOPATH)/bin

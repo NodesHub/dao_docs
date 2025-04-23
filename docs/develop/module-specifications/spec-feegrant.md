@@ -687,7 +687,7 @@ message Fee {
 The following example shows a CLI command with the `--fee-account` flag:
 
 ```
-./ODISEOd tx gov submit-proposal --title="Test Proposal" --description="My awesome proposal" --type="Text" --from validator-key --fee-account=ODISEO1fmcjjt6yc9wqup2r06urnrd928jhrde6gcld6n --chain-id=testnet --fees="10uluna"
+./achillesd tx gov submit-proposal --title="Test Proposal" --description="My awesome proposal" --type="Text" --from validator-key --fee-account=ODISEO1fmcjjt6yc9wqup2r06urnrd928jhrde6gcld6n --chain-id=testnet --fees="10uluna"
 ```
 
 ### Granted fee deductions

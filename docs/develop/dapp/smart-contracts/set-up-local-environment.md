@@ -4,7 +4,7 @@ As a smart contract developer, you will need to write, compile, upload, and test
 
 ## Install ODISEO Core locally
 
-Visit [build ODISEO core](../../../full-node/run-a-full-ODISEO-node/build-ODISEO-core.md) to install the latest version of ODISEO Core to obtain a working version of `ODISEOd`. You will need this to connect to your local ODISEO test network to work with smart contracts.
+Visit [build ODISEO core](../../../full-node/run-a-full-ODISEO-node/build-ODISEO-core.md) to install the latest version of ODISEO Core to obtain a working version of `achillesd`. You will need this to connect to your local ODISEO test network to work with smart contracts.
 
 ## Download LocalODISEO
 

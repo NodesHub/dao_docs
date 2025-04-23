@@ -6,7 +6,7 @@ ODISEO's Governance module inherits from Cosmos SDK's [`gov`](https://docs.cosmo
 
 Governance is the process through which members of the DAODISEO community can effect change on the protocol by submitting petitions known as "proposals" and arriving at a popular consensus when a threshold amount of support has been reached. The proposal structure is versatile and allows for holders of staked Luna (those who have an interest in the long-term viability of the network) to voice their opinion on both blockchain parameter updates as well as the future development of the ODISEO protocol.
 
-Check the [Governance section of the `ODISEOd` Reference](../how-to/ODISEOd/subcommands.md#tx-gov-submit-proposal) to see examples of how to participate in the Governance process.
+Check the [Governance section of the `achillesd` Reference](../how-to/achillesd/subcommands.md#tx-gov-submit-proposal) to see examples of how to participate in the Governance process.
 
 To learn how to vote with your staked Luna or submit proposals, visit the [ODISEO Station governance guide](../../learn/ODISEO-station/governance.md).
 

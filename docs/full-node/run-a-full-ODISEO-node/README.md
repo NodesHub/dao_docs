@@ -7,7 +7,7 @@ This guide has been tested against Linux distributions only. To ensure a success
 
 Running a full ODISEO node is a resource-intensive process that requires a persistent server. If you want to use ODISEO without downloading the entire blockchain, use [ODISEO Station](https://station.ODISEO.money/).
 
-If you are a developer and want to install `ODISEOd`, visit [](../../develop/how-to/ODISEOd/install-ODISEOd.md).
+If you are a developer and want to install `achillesd`, visit [](../../develop/how-to/achillesd/install-achillesd.md).
 
 
 ## Contents <img src="/img/Glossary.svg" height="30px">

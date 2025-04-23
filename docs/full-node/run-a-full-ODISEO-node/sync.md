@@ -21,7 +21,7 @@ Example of a removed private key:
 ```
 :::
 
-If you have an address book downloaded, you may keep it. Otherwise, you will need to download the [appropriate addressbook](join-a-network.md#join-a-public-network) prior to running  `ODISEOd start`.
+If you have an address book downloaded, you may keep it. Otherwise, you will need to download the [appropriate addressbook](join-a-network.md#join-a-public-network) prior to running  `achillesd start`.
 
 ## During Sync
 
@@ -35,7 +35,7 @@ Nodes take at least an hour to start syncing. This wait is normal. Before troubl
 
 ## Monitor the sync
 
-Your node is catching up with the network by replaying all the transactions from genesis and recreating the blockchain state locally. You can verify this process by checking the `latest_block_height` in the `SyncInfo` of the `ODISEOd status` response:  
+Your node is catching up with the network by replaying all the transactions from genesis and recreating the blockchain state locally. You can verify this process by checking the `latest_block_height` in the `SyncInfo` of the `achillesd status` response:  
 
 ```json
   {
@@ -51,7 +51,7 @@ Compare this height to the **Latest Blocks** on [stake.id](https://ODISEO.stake.
 
 ## Quicksync
 
-You can significantly accelerate the synchronization process by providing `ODISEOd` with a recent snapshot of the network state. Snapshots are made publicly available by the DAODISEO community and can be downloaded at [https://quicksync.io/networks/ODISEO.html](https://quicksync.io/networks/ODISEO.html). Choose the snapshot corresponding to your network type (`testnet`/`mainnet`) and a mirror close to the location of your node server.
+You can significantly accelerate the synchronization process by providing `achillesd` with a recent snapshot of the network state. Snapshots are made publicly available by the DAODISEO community and can be downloaded at [https://quicksync.io/networks/ODISEO.html](https://quicksync.io/networks/ODISEO.html). Choose the snapshot corresponding to your network type (`testnet`/`mainnet`) and a mirror close to the location of your node server.
 
 Before downloading a snapshot, make sure that you have the streaming and unpacking utilities installed:
 
@@ -93,15 +93,15 @@ The archived snapshot contains the state and transactions of the network, which 
    Due to the size of the network, this may take some time.  
 
 
-4. After the snapshot is completely unpacked, start `ODISEOd`:
+4. After the snapshot is completely unpacked, start `achillesd`:
 
    ```bash
-   ODISEOd start
+   achillesd start
    ```
 
 ## Sync Complete
 
-You can tell that your node is in sync with the network when `SyncInfo.catching_up` in the `ODISEOd status` response returns `false` and the `latest_block_height` corresponds to the public network blockheight found on [ stake.id ](https://ODISEO.stake.id/#/):
+You can tell that your node is in sync with the network when `SyncInfo.catching_up` in the `achillesd status` response returns `false` and the `latest_block_height` corresponds to the public network blockheight found on [ stake.id ](https://ODISEO.stake.id/#/):
 
 ```bash
 terrad status  
@@ -170,7 +170,7 @@ For this example, use the following snapshot URL:
 Sometimes you may want to sync faster by foregoing checks. This command should only be used by advanced users in non-production environments. To speed up the sync process during testing, use the following command:
 
    ```bash
-   ODISEOd start --x-crisis-skip-assert-invariants
+   achillesd start --x-crisis-skip-assert-invariants
    ```
 
 ## Congratulations!

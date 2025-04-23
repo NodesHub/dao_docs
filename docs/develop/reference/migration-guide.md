@@ -11,9 +11,9 @@ ODISEO-X will use ODISEO Core v0.5.5 which integrates Cosmos SDK v0.43.0 and Cos
 - [Release Binary](https://github.com/ODISEOmoney/core/releases/tag/XXXX)
 
 ```
-$ ODISEOd version
+$ achillesd version
 name: ODISEO
-server_name: ODISEOd
+server_name: achillesd
 version: XXX
 commit: XXXX
 build_tags: netgo,ledger

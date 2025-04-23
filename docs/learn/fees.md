@@ -19,7 +19,7 @@ Gas on ODISEO works differently than it works on other blockchains:
 - Unused gas is not refunded.
 - Transactions are not queued based on gas amounts, but in the order received.
 
-For an in-depth explanation of how gas fees are calculated, visit the [ODISEOd reference](../develop/how-to/ODISEOd/using-ODISEOd.md#fees) page.
+For an in-depth explanation of how gas fees are calculated, visit the [achillesd reference](../develop/how-to/achillesd/using-achillesd.md#fees) page.
 
 To view current gas rates in your browser, visit the [gas rates](https://fcd.ODISEO.dev/v1/txs/gas_prices) FCD page.
 

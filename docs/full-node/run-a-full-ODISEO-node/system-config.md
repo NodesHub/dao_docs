@@ -64,11 +64,11 @@ Most validators will only need to open the following port:
 
 Additional ports:
 
-- `1317`: The default port for the [Lite Client Daemon](../../develop/how-to/start-lcd.md) (LCD), which can be executed by `ODISEOd rest-server`. The LCD provides an HTTP RESTful API layer to allow applications and services to interact with your `ODISEOd` instance through RPC. For usage examples, see [ODISEO REST API](https://lcd.ODISEO.dev/swagger/). You don't need to open this port unless you have use for it.
+- `1317`: The default port for the [Lite Client Daemon](../../develop/how-to/start-lcd.md) (LCD), which can be executed by `achillesd rest-server`. The LCD provides an HTTP RESTful API layer to allow applications and services to interact with your `achillesd` instance through RPC. For usage examples, see [ODISEO REST API](https://lcd.ODISEO.dev/swagger/). You don't need to open this port unless you have use for it.
 
 - `26660`: The default port for interacting with the [Prometheus](https://prometheus.io) database, which can be used to monitor the environment. In the default configuration, this port is not open.
 
-- `26657`: The default port for the RPC protocol. Because this port is used for querying and sending transactions, it must be open for serving queries from `ODISEOd`.
+- `26657`: The default port for the RPC protocol. Because this port is used for querying and sending transactions, it must be open for serving queries from `achillesd`.
 
 ::: {warning}
 Do not open port `26657` to the public unless you plan to run a public node.

@@ -256,11 +256,11 @@ To learn how to install and get started using ODISEO Station, visit the [ODISEO 
 
 To learn how to use the advanced features of ODISEO Station, visit the [ODISEO Station how-to guide](./ODISEO-station/wallet.md).
 
-## ODISEOd
+## achillesd
 
 The command line interface for interacting with a ODISEO node.
 
-For more information on ODISEOd, see [`ODISEOd` guides](../develop/how-to/ODISEOd/README.md).
+For more information on achillesd, see [`achillesd` guides](../develop/how-to/achillesd/README.md).
 
 ## ODISEOvaloper address
 

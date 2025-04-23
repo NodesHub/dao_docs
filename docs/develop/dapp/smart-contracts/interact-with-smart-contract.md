@@ -13,7 +13,7 @@ cd localODISEO
 docker-compose up
 ```
 
-You should also have the latest version of `ODISEOd` by building the latest version of ODISEO Core. You will configure `ODISEOd` to use it against your isolated testnet environment.
+You should also have the latest version of `achillesd` by building the latest version of ODISEO Core. You will configure `achillesd` to use it against your isolated testnet environment.
 
 In a separate terminal, make sure to set up the following mnemonic:
 
@@ -32,12 +32,12 @@ satisfy adjust timber high purchase tuition stool faith fine install that you un
 Make sure that the **optimized build** of `my_first_contract.wasm` that you created in the last section is in your current working directory.
 
 ```sh
-ODISEOd tx wasm store artifacts/my_first_contract.wasm --from test1 --chain-id=localODISEO --gas=auto --fees=100000uluna --broadcast-mode=block
+achillesd tx wasm store artifacts/my_first_contract.wasm --from test1 --chain-id=localODISEO --gas=auto --fees=100000uluna --broadcast-mode=block
 ```
 Or, if you are on an arm64 machine:
 
 ```sh
-ODISEOd tx wasm store artifacts/my_first_contract-aarch64.wasm --from test1 --chain-id=localODISEO --gas=auto --fees=100000uluna --broadcast-mode=block
+achillesd tx wasm store artifacts/my_first_contract-aarch64.wasm --from test1 --chain-id=localODISEO --gas=auto --fees=100000uluna --broadcast-mode=block
 ```
 
 This will ask for a confirmation before broadcasting to LocalODISEO, type `y` and press enter.
@@ -98,7 +98,7 @@ You have now uploaded the code for your contract, but still don't have a contrac
 You can compress the JSON into 1 line with [this online tool](https://goonlinetools.com/json-minifier/).
 
 ```sh
-ODISEOd tx wasm instantiate 1 '{"count":0}' --from test1 --chain-id=localODISEO --fees=10000uluna --gas=auto --broadcast-mode=block
+achillesd tx wasm instantiate 1 '{"count":0}' --from test1 --chain-id=localODISEO --fees=10000uluna --gas=auto --broadcast-mode=block
 ```
 
 You should get a response like the following:
@@ -140,7 +140,7 @@ From the output, you can see that your contract was created above at: `ODISEO18v
 Check out your contract information:
 
 ```sh
-ODISEOd query wasm contract ODISEO18vd8fpwxzck93qlwghaj6arh4p7c5n896xzem5
+achillesd query wasm contract ODISEO18vd8fpwxzck93qlwghaj6arh4p7c5n896xzem5
 address: ODISEO18vd8fpwxzck93qlwghaj6arh4p7c5n896xzem5
 owner: ODISEO1dcegyrekltswvyy0xy69ydgxn9x8x32zdtapd8
 codeid: 1
@@ -182,7 +182,7 @@ First, to burn:
 ```
 
 ```sh
-ODISEOd tx wasm execute ODISEO18vd8fpwxzck93qlwghaj6arh4p7c5n896xzem5 '{"reset":{"count":5}}' --from test1 --chain-id=localODISEO --fees=1000000uluna --gas=auto --broadcast-mode=block
+achillesd tx wasm execute ODISEO18vd8fpwxzck93qlwghaj6arh4p7c5n896xzem5 '{"reset":{"count":5}}' --from test1 --chain-id=localODISEO --fees=1000000uluna --gas=auto --broadcast-mode=block
 ```
 
 #### Incrementing
@@ -194,7 +194,7 @@ ODISEOd tx wasm execute ODISEO18vd8fpwxzck93qlwghaj6arh4p7c5n896xzem5 '{"reset":
 ```
 
 ```sh
-ODISEOd tx wasm execute ODISEO18vd8fpwxzck93qlwghaj6arh4p7c5n896xzem5 '{"increment":{}}' --from test1 --chain-id=localODISEO --gas=auto --fees=1000000uluna --broadcast-mode=block
+achillesd tx wasm execute ODISEO18vd8fpwxzck93qlwghaj6arh4p7c5n896xzem5 '{"increment":{}}' --from test1 --chain-id=localODISEO --gas=auto --fees=1000000uluna --broadcast-mode=block
 ```
 
 #### Querying count
@@ -208,7 +208,7 @@ Check the result of your executions!
 ```
 
 ```sh
-ODISEOd query wasm contract-store ODISEO18vd8fpwxzck93qlwghaj6arh4p7c5n896xzem5 '{"get_count":{}}'
+achillesd query wasm contract-store ODISEO18vd8fpwxzck93qlwghaj6arh4p7c5n896xzem5 '{"get_count":{}}'
 ```
 
 Expected output:

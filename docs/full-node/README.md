@@ -45,12 +45,12 @@ reference/README
 :::
 
 :::{grid-item-card}
-:link: ../develop/how-to/ODISEOd/README.html
+:link: ../develop/how-to/achillesd/README.html
 :class-card: sd-text-center sd-shadow-md sd-rounded-3
-```{image} /img/ODISEOd.svg
+```{image} /img/achillesd.svg
 :class: sd-width-auto sd-animate-grow50-rot20 sd-pb-2
 ```
-**ODISEOd**  
+**achillesd**  
 :::
 
 :::{grid-item-card}

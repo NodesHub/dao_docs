@@ -1,6 +1,6 @@
 # Commands
 
-This section describes the commands available from `ODISEOd`, the command line interface that connects a running `ODISEOd` process.
+This section describes the commands available from `achillesd`, the command line interface that connects a running `achillesd` process.
 
 ## `add-genesis-account`
 

@@ -1,4 +1,4 @@
-# Install `ODISEOd` for M1 mac
+# Install `achillesd` for M1 mac
 
 1. Navigate to [https://github.com/ODISEOmoney/core/tags](https://github.com/ODISEOmoney/core/tags) and click on the latest release. 
 2. Download the correct `.tar.gz` file for your computer's OS.
@@ -40,10 +40,10 @@
 
     
 
-5. Run `./ODISEOd`
+5. Run `./achillesd`
 
    ```sh
-   ./ODISEOd
+   ./achillesd
    ```
     
    :::{admonition} If a security warning occurs:
@@ -51,18 +51,18 @@
     
    1. Navigate to system preferences→security & privacy. 
    2. Under the "General" tab, click "Allow anyway." 
-   3. Run `./ODISEOd` again. 
+   3. Run `./achillesd` again. 
    4. When prompted, click "open." Repeat for other security errors. 
 
 
-6. Add `ODISEOd` to your path:
+6. Add `achillesd` to your path:
 
    :::::{tab-set}
    
    ::::{tab-item} Intel-based
    
    ```sh
-   cp ODISEOd /usr/local/bin
+   cp achillesd /usr/local/bin
    ```
    
    ::::
@@ -73,7 +73,7 @@
     
    mkdir bin
     
-   cp ODISEOd /usr/local/bin
+   cp achillesd /usr/local/bin
    ```
    :::{Note}
    If you receive a `permission denied` message, add `sudo` before each command. 
@@ -83,8 +83,8 @@
    :::::
     
 
-7. Start `ODISEOd`
+7. Start `achillesd`
 
    ```sh
-   ODISEOd
+   achillesd
    ```

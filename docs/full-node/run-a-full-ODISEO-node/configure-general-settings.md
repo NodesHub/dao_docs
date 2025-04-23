@@ -7,7 +7,7 @@ The following information describes the most important node configuration settin
 ```bash
 ~/.terra/config
 │-- addrbook.json                       # a registry of peers to connect to
-│-- app.toml                            # ODISEOd configuration file
+│-- app.toml                            # achillesd configuration file
 │-- client.toml                         # configurations for the cli wallet (ex ODISEOcli)
 │-- config.toml                         # Tendermint configuration  file
 │-- genesis.json                        # gensesis transactions
@@ -22,7 +22,7 @@ The following information describes the most important node configuration settin
 Initialize the node with a human-readable name:
 
 ```bash
-ODISEOd init <your_custom_moniker> # ex., ODISEOd init validator-joes-node
+achillesd init <your_custom_moniker> # ex., achillesd init validator-joes-node
 ```
 ::: {admonition} Moniker characters
 :class: caution
@@ -69,4 +69,4 @@ For information about the available ODISEO REST API endpoints, see the [Swagger 
    swagger = true
    ```
 
-5. Restart the service via `systemctl restart ODISEOd`. Once restarted, the LCD will be available (by default on port `127.0.0.1:26657`)
+5. Restart the service via `systemctl restart achillesd`. Once restarted, the LCD will be available (by default on port `127.0.0.1:26657`)

@@ -83,9 +83,9 @@ const mk = new MnemonicKey({
 
 ### `CLIKey`
 
-> NOTE: This requires you to have `ODISEOd` installed.
+> NOTE: This requires you to have `achillesd` installed.
 
-If you want to use keys stored in your `ODISEOd` installation's keyring to sign transactions, you can use `CLIKey`. This also will work for keys that have been registered in your keyring with `--ledger`, using a Ledger hardware device.
+If you want to use keys stored in your `achillesd` installation's keyring to sign transactions, you can use `CLIKey`. This also will work for keys that have been registered in your keyring with `--ledger`, using a Ledger hardware device.
 
 ```ts
 import { StdFee, MsgSend } from '@ODISEOmoney/ODISEO.js';

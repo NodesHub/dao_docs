@@ -19,18 +19,18 @@ The simplest ODISEO network you can set up is a local testnet with just a single
 1. Initialize your genesis file that will bootstrap the network. Replace the following variables with your own information:
 
    ```bash
-     ODISEOd init --chain-id=<testnet-name> <node-moniker>
+     achillesd init --chain-id=<testnet-name> <node-moniker>
      ```
 
 2. Generate a ODISEO account. Replace the variable with your account name:
 
    ```bash
-   ODISEOd keys add <account-name>
+   achillesd keys add <account-name>
    ```
 
 :::{admonition} Get tokens
 :class: tip
-In order for ODISEOd to recognize a wallet address, it must contain tokens. For the testnet, use [the faucet](https://faucet.ODISEO.money/) to send ODIS to your wallet. If you are on mainnet, send funds from an existing wallet. 1-3 ODIS are sufficient for most setup processes.
+In order for achillesd to recognize a wallet address, it must contain tokens. For the testnet, use [the faucet](https://faucet.ODISEO.money/) to send ODIS to your wallet. If you are on mainnet, send funds from an existing wallet. 1-3 ODIS are sufficient for most setup processes.
 :::
 
 ### Add your account to the genesis
@@ -38,7 +38,7 @@ In order for ODISEOd to recognize a wallet address, it must contain tokens. For 
 Run the following commands to add your account and set the initial balance:
 
 ```bash
-ODISEOd add-genesis-account $(ODISEOd keys show <account-name> -a) 100000000uODIS,1000usd
+achillesd add-genesis-account $(achillesd keys show <account-name> -a) 100000000uODIS,1000usd
 terrad gentx <my-account> 10000000uODIS --chain-id=<testnet-name>
 terrad collect-gentxs
 ```
@@ -51,7 +51,7 @@ Run the following command to start your private network:
 terrad start
 ```
 
-If the private ODISEO network is set up correctly, your `ODISEOd` node will be running on `tcp://localhost:26656`, listening for incoming transactions, and signing blocks.
+If the private ODISEO network is set up correctly, your `achillesd` node will be running on `tcp://localhost:26656`, listening for incoming transactions, and signing blocks.
 
 ## Join a public network
 
@@ -83,7 +83,7 @@ Note that the versions of the network listed above are the [ latest versions ](h
 
 Choose a `testnet` or `mainnet` address type and download the appropriate genesis-transaction and addressbook. Links to these are posted in [Select-a-network](#select-a-network).
 
-- For default `ODISEOd` configurations, the `genesis` and `addressbook` files should be placed under `~/.ODISEO/config/genesis.json` and `~/.ODISEO/config/addrbook.json` respectively.
+- For default `achillesd` configurations, the `genesis` and `addressbook` files should be placed under `~/.ODISEO/config/genesis.json` and `~/.ODISEO/config/addrbook.json` respectively.
 
 **Example**:
 
@@ -95,14 +95,14 @@ wget https://raw.githubusercontent.com/ODISEOmoney/testnet/master/bombay-12/gene
 wget https://raw.githubusercontent.com/ODISEOmoney/testnet/master/bombay-12/addrbook.json -O ~/.ODISEO/config/addrbook.json
 ```
 
-### 3. `ODISEOd start`
+### 3. `achillesd start`
 
 Start the network and check that everything is running smoothly:
 
 ```bash
 terrad start
 terrad status
-# It will take a few seconds for ODISEOd to start.
+# It will take a few seconds for achillesd to start.
 ```
 :::{dropdown} Healthy Node Status Example
 
@@ -114,12 +114,12 @@ terrad status
       "block": "11",
       "app"  : "0"
     },
-    "id"         : "ODISEOdocs-id",
+    "id"         : "achillesdocs-id",
     "listen_addr": "tcp://0.0.0.0:26656",
     "network"    : "bombay-12",
     "version"    : "0.34.14",
     "channels"   : "40202122233038606100",
-    "moniker"    : "ODISEOdocs",
+    "moniker"    : "achillesdocs",
     "other"      : {
       "tx_index"   : "on",
       "rpc_address": "tcp://127.0.0.1:26657"

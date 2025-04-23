@@ -43,7 +43,7 @@ Learn more about [sentry-node architecture](https://forum.cosmos.network/t/sentr
    ```
 
 ::: {tip}
-A node address has the following format: `nodeid@ip:port`, you can get the nodeid by running `ODISEOd tendermint show-node-id`, the default port is 26656.
+A node address has the following format: `nodeid@ip:port`, you can get the nodeid by running `achillesd tendermint show-node-id`, the default port is 26656.
 :::
 
 ## Environment Variables

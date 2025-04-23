@@ -33,7 +33,7 @@ terrad keys show --multisig-threshold=K name1 name2 name3 [...]
 ## Signing a transaction
 
 ::: {Important}
-This example uses `test1`, `test2`, `test3` keys from [LocalODISEO](https://github.com/ODISEOmoney/LocalODISEO). Import them into your `ODISEOd` keystore to follow along.
+This example uses `test1`, `test2`, `test3` keys from [LocalODISEO](https://github.com/ODISEOmoney/LocalODISEO). Import them into your `achillesd` keystore to follow along.
 :::
 
 ### Step 1: Create the multisig key

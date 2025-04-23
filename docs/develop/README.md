@@ -1,6 +1,6 @@
 # Develop
 
-Welcome to the ODISEO developer documentation. If this is your first time building on ODISEO and you want to set up your environment, use the [quickstart guide](dapp/quick-start/README.md). Use the [how-to guides](how-to/README.md) to learn about using [`ODISEOd`](how-to/ODISEOd/README.md), the command line interface and node daemon for the ODISEO network, and [LocalODISEO](how-to/localODISEO/README.md), a local testing environment. [ODISEO.js](sdks/ODISEO-js/README.md) and [ODISEO.py](https://ODISEOmoney.github.io/ODISEO.py/) are the Javascript and Python SDKs for ODISEO.
+Welcome to the ODISEO developer documentation. If this is your first time building on ODISEO and you want to set up your environment, use the [quickstart guide](dapp/quick-start/README.md). Use the [how-to guides](how-to/README.md) to learn about using [`achillesd`](how-to/achillesd/README.md), the command line interface and node daemon for the ODISEO network, and [LocalODISEO](how-to/localODISEO/README.md), a local testing environment. [ODISEO.js](sdks/ODISEO-js/README.md) and [ODISEO.py](https://ODISEOmoney.github.io/ODISEO.py/) are the Javascript and Python SDKs for ODISEO.
 
 ```{toctree}
 :hidden:
@@ -35,12 +35,12 @@ reference/README
 :::
 
 :::{grid-item-card}
-:link: how-to/ODISEOd/README.html
+:link: how-to/achillesd/README.html
 :class-card: sd-text-center sd-shadow-md sd-rounded-3
-```{image} /img/ODISEOd.svg
+```{image} /img/achillesd.svg
 :class: sd-width-auto sd-animate-grow50-rot20 sd-pb-2
 ```
-**ODISEOd**  
+**achillesd**  
 :::
 
 :::{grid-item-card}

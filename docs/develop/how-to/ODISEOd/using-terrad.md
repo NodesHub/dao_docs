@@ -1,6 +1,6 @@
-# Using ODISEOd
+# Using achillesd
 
-The following information explains the functions you can use from ODISEOd, the command-line interface that connects to ODISEO and enables you to interact with the ODISEO blockchain. Every active validator and full node runs ODISEOd and communicates with their node via ODISEOd. In this relationship, ODISEOd operates as both the client and the server. You can use ODISEOd to interact with the ODISEO blockchain by uploading contracts, querying data, managing staking activities, working with governance proposals, and more. For more general information at the command line, run `ODISEOd --help`. For more information about a specific `ODISEOd` command, append the `-h` or `--help` flag after the command, such as `ODISEOd query --help`.
+The following information explains the functions you can use from achillesd, the command-line interface that connects to ODISEO and enables you to interact with the ODISEO blockchain. Every active validator and full node runs achillesd and communicates with their node via achillesd. In this relationship, achillesd operates as both the client and the server. You can use achillesd to interact with the ODISEO blockchain by uploading contracts, querying data, managing staking activities, working with governance proposals, and more. For more general information at the command line, run `achillesd --help`. For more information about a specific `achillesd` command, append the `-h` or `--help` flag after the command, such as `achillesd query --help`.
 
 ## Accessing a Node
 
@@ -8,7 +8,7 @@ To query the state and send transactions, you must connect to a node, which is t
 
 ### Running your own full node
 
-Running your own full node is the most secure option, but it comes with relatively high resource requirements. For more information about the requirements to run your own full node and a tutorial for installing `ODISEOd`, see [installation](../../../full-node/run-a-full-ODISEO-node/build-ODISEO-core.md). For a tutorial that explains how to connect to an existing ODISEO network, see [joining a network](../../../full-node/run-a-full-ODISEO-node/join-a-network.md).
+Running your own full node is the most secure option, but it comes with relatively high resource requirements. For more information about the requirements to run your own full node and a tutorial for installing `achillesd`, see [installation](../../../full-node/run-a-full-ODISEO-node/build-ODISEO-core.md). For a tutorial that explains how to connect to an existing ODISEO network, see [joining a network](../../../full-node/run-a-full-ODISEO-node/join-a-network.md).
 
 ### Connecting to a remote full node
 
@@ -16,21 +16,21 @@ If you don't want to run your own full node, you can connect to someone else's f
 
 To connect to the full-node, you need an address in the `https://<host>:<port>` format, for example `https://77.87.106.33:26657`. This address has to be communicated by the full-node operator you choose to trust. You will use this address in the following section.
 
-If you are not running a node yet would like to communicate through ODISEOd, lists of public nodes can be found [here](https://docs.ODISEO.money/Reference/endpoints.html#private-rpc-endpoints).
+If you are not running a node yet would like to communicate through achillesd, lists of public nodes can be found [here](https://docs.ODISEO.money/Reference/endpoints.html#private-rpc-endpoints).
 
-## Configuring ODISEOd
+## Configuring achillesd
 
-`ODISEOd` enables you to interact with the node that runs on the ODISEO network, whether you run it yourself or not. To configure `ODISEOd`, edit the the `config.toml` file in the `~/.ODISEO/config/` directory.
+`achillesd` enables you to interact with the node that runs on the ODISEO network, whether you run it yourself or not. To configure `achillesd`, edit the the `config.toml` file in the `~/.ODISEO/config/` directory.
 
 ## Querying Blockchain State
 
-To query all relevant information from the blockchain, such as like account balances, amount of bonded tokens, outstanding rewards, and so on, use `ODISEOd query`. The following list shows some of the most useful commands for delegators:
+To query all relevant information from the blockchain, such as like account balances, amount of bonded tokens, outstanding rewards, and so on, use `achillesd query`. The following list shows some of the most useful commands for delegators:
 
 ```bash
 # query account balances and other account-related information
 terrad query account <ACCOUNT_ADDRESS>
 # Account address is of the form ODISEO1rEXAMPLE9tEXAMPLEf9cvEXAMPLEss
-# you can find the one for your node by running `ODISEOd keys list`
+# you can find the one for your node by running `achillesd keys list`
 
 # query the list of validators
 terrad query staking validators
@@ -51,7 +51,7 @@ terrad query distr rewards <delegatorAddress>
 
 ## Sending Transactions
 
-To interact with the blockchain by sending transactions containing module messages with state-changing directives that get processed and included in blocks, use `ODISEOd tx`. All of transaction-sending operations follow the form:
+To interact with the blockchain by sending transactions containing module messages with state-changing directives that get processed and included in blocks, use `achillesd tx`. All of transaction-sending operations follow the form:
 
 ```bash
 terrad tx ...
@@ -220,7 +220,7 @@ Gas estimate might be inaccurate as state changes could occur in between the end
 
 The adjustment can be controlled via the `--gas-adjustment` flag, whose default value is 1.0.
 
-To get a direct fee estimation from `ODISEOd`:
+To get a direct fee estimation from `achillesd`:
 
 ```bash
 terrad tx estimate-fee ...\
@@ -239,27 +239,27 @@ terrad tx send ... \
 
 ## Shell Autocompletion
 
-Auto-completion scripts for popular UNIX shell interpreters such as `bash` and `zsh` can be generated through the `completion` command, which is available for both `ODISEOd` and `ODISEOd`. This allows for a more convenient way to interact with the ODISEO Core endpoints when using the command-line.
+Auto-completion scripts for popular UNIX shell interpreters such as `bash` and `zsh` can be generated through the `completion` command, which is available for both `achillesd` and `achillesd`. This allows for a more convenient way to interact with the ODISEO Core endpoints when using the command-line.
 
 If you want to generate `bash` completion scripts run the following command:
 
 ```bash
-ODISEOd completion > ODISEOd_completion
-ODISEOd completion > ODISEOd_completion
+achillesd completion > achillesd_completion
+achillesd completion > achillesd_completion
 ```
 
 If you want to generate `zsh` completion scripts run the following command:
 
 ```bash
-ODISEOd completion --zsh > ODISEOd_completion
-ODISEOd completion --zsh > ODISEOd_completion
+achillesd completion --zsh > achillesd_completion
+achillesd completion --zsh > achillesd_completion
 ```
 
 On most UNIX systems, such scripts may be loaded in `.bashrc` or `.bash_profile` to enable Bash autocompletion.
 
 ```bash
-echo '. ODISEOd_completion' >> ~/.bashrc
-echo '. ODISEOd_completion' >> ~/.bashrc
+echo '. achillesd_completion' >> ~/.bashrc
+echo '. achillesd_completion' >> ~/.bashrc
 ```
 
 Refer to the user's manual of your interpreter provided by your operating system for information on how to enable shell autocompletion.
